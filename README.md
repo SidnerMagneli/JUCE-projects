@@ -1,2 +1,2 @@
 # VST
-My try at making a VST
+My attempt at making a VST plugin.
