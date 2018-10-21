@@ -16,6 +16,7 @@
 *.dylib
 *.dll
 
+
 # Fortran module files
 *.mod
 *.smod
@@ -30,3 +31,10 @@
 *.exe
 *.out
 *.app
+
+# Projucer
+*.jucer
+
+#project folders
+synth-one/*
+!synth-one/Source
