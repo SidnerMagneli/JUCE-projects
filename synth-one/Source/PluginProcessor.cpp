@@ -26,7 +26,8 @@ SynthoneAudioProcessor::SynthoneAudioProcessor()
 {
 	synthOne.clearVoices();
 
-	for (int i = 0; i < 6; i++) 
+	// add new voices
+	for (int i = 0; i < 5; i++) 
 	{
 		synthOne.addVoice(new SynthVoice());
 	}
@@ -143,7 +144,6 @@ void SynthoneAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffe
 {
 	buffer.clear();
 	synthOne.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
-
 }
 
 //==============================================================================

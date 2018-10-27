@@ -13,12 +13,12 @@
 
 class SynthSound : public SynthesiserSound
 {
-	bool appliesToNote(int /*midiNoteNumber*/) 
+	bool appliesToNote(int midiNoteNumber) 
 	{
 		return true;
 	}
 
-	bool appliesToChannel(int /*midiChannel*/)
+	bool appliesToChannel(int midiChannel)
 	{
 		return true;
 	}

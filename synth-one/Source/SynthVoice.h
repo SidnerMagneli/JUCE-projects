@@ -1,4 +1,4 @@
-/*
+﻿/*
   ==============================================================================
 
     SynthVoice.h
@@ -11,6 +11,8 @@
 #pragma once
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "SynthSound.h"
+#include <iostream>
+#include <string>
 
 class SynthVoice : public SynthesiserVoice
 {
@@ -23,7 +25,7 @@ public:
 	void startNote(int midiNoteNumber, float velocity, SynthesiserSound * sound, int currentPitchWheelPosition)
 	{
 		frequency = MidiMessage::getMidiNoteInHertz(midiNoteNumber);
-		std::cout << midiNoteNumber << std::endl;
+		Logger::outputDebugString(std::to_string(midiNoteNumber));
 	}
 
 	void stopNote(float velocity, bool allowTailOff)
