@@ -1,2 +1,2 @@
-# VST
-My attempt at making a VST plugin.
+# JUCE projects
+Projects made with the JUCE framework in C++.
