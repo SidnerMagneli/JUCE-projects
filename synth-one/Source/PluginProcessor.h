@@ -59,6 +59,9 @@ public:
 
 private:
 	Synthesiser synthOne;
+	SynthVoice* myVoice;
+
+	double lastSampleRate;
 	//==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SynthoneAudioProcessor)
 };

@@ -17,20 +17,26 @@ class SynthVoice : public SynthesiserVoice
 public:
 	bool canPlaySound(SynthesiserSound * sound)
 	{
-
+		return dynamic_cast<SynthSound*>(sound) != nullptr;
 	}
 
 	void startNote(int midiNoteNumber, float velocity, SynthesiserSound * sound, int currentPitchWheelPosition)
 	{
-
+		frequency = MidiMessage::getMidiNoteInHertz(midiNoteNumber);
+		std::cout << midiNoteNumber << std::endl;
 	}
 
 	void stopNote(float velocity, bool allowTailOff)
 	{
+		clearCurrentNote();
+	}
+
+	void renderNextBlock(AudioBuffer<float> &outputBuffer, int startSample, int numSamples)
+	{
 
 	}
 
-	void pithWheelMoved(int newPitchWheelValue)
+	void pitchWheelMoved(int newPitchWheelValue)
 	{
 
 	}
@@ -40,11 +46,7 @@ public:
 
 	}
 
-	void renderNextBlock(AudioBuffer<float> &outputBuffer, int startSample, int numSamples)
-	{
-
-	}
-
 private:
-
+	double level;
+	double frequency;
 };
